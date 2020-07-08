@@ -1,5 +1,3 @@
-console.log('this is opening page')
-
 
 
 const weatherForm=document.querySelector('form')
