@@ -5,6 +5,8 @@ const hbs=require('hbs')
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
 
+const port=process.env.PORT || 3000
+
 //Define path for Config of express
 const directoryName=path.join(__dirname,'../public')
 const viewDirectory=path.join(__dirname,'../templates/views')
@@ -73,6 +75,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log('The server is listening at port 3000')
+app.listen(port,()=>{
+    console.log('The server is listening at port '+ port)
 })
